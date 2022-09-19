@@ -8,7 +8,6 @@ const url = require('url');
 // allows only http or https link - to prevent mailto links
 // filters out image and pdf links
 function extractInternalHyperlinks(linksCollection, baseUrl, depth) {
-  console.log("depth is", depth);
   let internalHyperlinks = [];
   const hostname = url.parse(baseUrl).hostname;
   let filteredLinksCollection = linksCollection.filter(linkObject => {
